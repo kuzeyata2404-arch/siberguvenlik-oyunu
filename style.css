@@ -1,0 +1,104 @@
+body {
+    font-family: 'Consolas', monospace;
+    background-color: #0a0a1a; /* Koyu Mavi/Siyah Zemin */
+    color: #00ff00; /* Yeşil Neon Metin */
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    background-color: #1a1a2e;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.4); /* Yeşil Neon Gölge */
+}
+
+h1 {
+    color: #00ffff; /* Cyan Başlık */
+    border-bottom: 2px solid #005500;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.durum-kutusu {
+    background-color: #003300;
+    border: 1px solid #00aa00;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* --- GRID YAPISI --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Kare yapar */
+    border: 3px solid #00ffff;
+    margin: 20px auto;
+    cursor: crosshair;
+}
+
+.grid-cell {
+    border: 1px solid #005500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    user-select: none;
+    transition: background-color 0.1s;
+}
+
+.cell-core { background-color: #ff0000; color: white; box-shadow: 0 0 10px red; }
+.cell-firewall { background-color: #00aa00; color: #1a1a2e; }
+.cell-virus { background-color: #ff00ff; color: #1a1a2e; box-shadow: 0 0 5px #ff00ff; }
+.cell-empty:hover { background-color: #001100; }
+
+/* --- KONTROL --- */
+.kontrol-kutusu {
+    background-color: #111122;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.kontrol-kutusu button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #00ffff; /* Cyan buton */
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.kontrol-kutusu button:hover {
+    background-color: #00cccc;
+}
+
+.kontrol-kutusu button:disabled {
+    background-color: #333;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.feedback-message {
+    margin-top: 15px;
+    color: #ffcc00; /* Sarı geri bildirim */
+    min-height: 20px;
+}
+
+.reset-button {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
